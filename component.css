@@ -1,0 +1,158 @@
+.components-section{
+    padding:120px 40px 80px;
+    min-height:100vh;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+}
+
+.title{
+    text-align:center;
+    font-size:42px;
+    margin-bottom:15px;
+    color:#38bdf8;
+}
+
+.subtitle{
+    text-align:center;
+    color:#cbd5e1;
+    font-size:18px;
+    margin-bottom:60px;
+    line-height:1.7;
+}
+
+/* GRID */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+/* CARD */
+.card{
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.08);
+    backdrop-filter:blur(12px);
+
+    padding:25px;
+    border-radius:22px;
+
+    transition:0.4s ease;
+    position:relative;
+    overflow:hidden;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,0.25);
+}
+
+/* HOVER EFFECT */
+.card:hover{
+    transform:translateY(-10px) scale(1.02);
+
+    border-color:#22c55e;
+
+    box-shadow:
+    0 15px 35px rgba(34,197,94,0.25);
+}
+
+/* TOP GLOW LINE */
+.card::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+
+    width:100%;
+    height:4px;
+
+    background:linear-gradient(
+    90deg,
+    #22c55e,
+    #38bdf8
+    );
+}
+
+/* TITLE */
+.card h3{
+    font-size:24px;
+    margin-bottom:15px;
+    color:#ffffff;
+}
+
+/* TEXT */
+.card p{
+    color:#cbd5e1;
+    line-height:1.8;
+    font-size:16px;
+}
+
+.card{
+    animation:fadeUp 0.8s ease;
+}
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@media(max-width:768px){
+
+    .title{
+        font-size:32px;
+    }
+
+    .subtitle{
+        font-size:15px;
+    }
+
+    .components-section{
+        padding:110px 20px 60px;
+    }
+
+}
+
+.card{
+  position:relative;
+  overflow:hidden;
+}
+
+.card::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  border-radius:16px;
+  padding:1px;
+  background:linear-gradient(
+    135deg,
+    #22c55e,
+    #06b6d4,
+    transparent
+  );
+
+  -webkit-mask:
+  linear-gradient(#fff 0 0) content-box,
+  linear-gradient(#fff 0 0);
+
+  mask:linear-gradient(#fff 0 0) content-box,
+  linear-gradient(#fff 0 0);
+
+  -webkit-mask-composite:xor;
+  opacity:0;
+  transition:0.5s;
+
+  mask-composite: xor;
+  opacity:0;
+  transition:0.5s;
+}
+
+.card:hover::before{
+  opacity:1;
+}

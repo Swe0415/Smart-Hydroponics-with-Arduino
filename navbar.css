@@ -1,0 +1,156 @@
+*{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, sans-serif;
+      scroll-behavior:smooth;
+    }
+
+    body{
+      background:#0f172a;
+      color:white;
+      overflow-x:hidden;
+    }
+    
+    /* NAVBAR */
+
+    nav{
+      width:100%;
+      height:100px;
+
+      background:#111827bf;
+      backdrop-filter:blur(12px);
+
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+
+      padding:0 40px;
+
+      position:fixed;
+      top:0;
+      left:0;
+
+      z-index:1000;
+
+      border-bottom:1px solid rgba(255,255,255,0.08);
+    }
+
+    .logo{
+      height: 100px;
+      width: 100px;
+      border-radius: 40%;
+    }
+
+    /* DESKTOP LINKS */
+
+    .nav-links{
+      display:flex;
+      gap:30px;
+      list-style:none;
+    }
+
+    .nav-links a{
+
+      text-decoration:none;
+      color:rgb(64, 203, 64);
+      font-size:16px;
+      transition:0.3s;
+      position:relative;
+    }
+
+    .nav-links a:hover{
+      color:#22c55e;
+    }
+
+    .nav-links a::after{
+      content:"";
+      position:absolute;
+      left:0;
+      bottom:-5px;
+
+      width:0%;
+      height:2px;
+
+      background:#b7c64c;
+      transition:0.3s;
+    }
+
+    .nav-links a:hover::after{
+      width:100%;
+    }
+
+    /* MENU BUTTON */
+
+    .menu-btn{
+      display:none;
+      flex-direction:column;
+      gap:5px;
+      cursor:pointer;
+    }
+
+    .menu-btn span{
+      width:28px;
+      height:3px;
+      background:white;
+      border-radius:10px;
+      transition:0.4s;
+    }
+
+    /* MOBILE SIDEBAR */
+
+    @media(max-width:768px){
+
+      .nav-links{
+
+        position:fixed;
+
+        top:85px;
+        right:-100%;
+
+        width:230px;
+
+        background:rgba(17,24,39,0.95);
+
+        backdrop-filter:blur(15px);
+
+        border-radius:20px 0 0 20px;
+
+        padding:30px 20px;
+
+        flex-direction:column;
+        gap:25px;
+
+        transition:0.5s ease;
+
+        box-shadow:
+        -5px 0 20px rgba(0,0,0,0.4);
+
+      }
+
+      .nav-links.active{
+        right:0;
+      }
+
+      .menu-btn{
+        display:flex;
+      }
+
+    }
+
+    /* HAMBURGER ANIMATION */
+
+    .menu-btn.active span:nth-child(1){
+      transform:rotate(45deg) translateY(11px);
+    }
+
+    .menu-btn.active span:nth-child(2){
+      opacity:0;
+    }
+
+    .menu-btn.active span:nth-child(3){
+      transform:rotate(-45deg) translateY(-11px);
+    }
+
+   
+

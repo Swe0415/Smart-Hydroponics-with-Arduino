@@ -1,0 +1,142 @@
+/* ================= Budget Section CSS ================= */
+
+.budget-section{
+    margin-top: 50px;
+  padding:80px 0px;
+}
+
+/* Category Title */
+
+.budget-category{
+  margin-top:25px;
+  margin-bottom:10px;
+  padding:12px 16px;
+  border-radius:12px;
+  background:linear-gradient(135deg,#22c55e,#06b6d4);
+  color:white;
+  font-weight:600;
+  letter-spacing:1px;
+  font-size:15px;
+}
+
+.section-title{
+  text-align:center;
+  margin-bottom:40px;
+}
+
+.section-title h2{
+  font-size:42px;
+  margin-bottom:10px;
+  color:#fff;
+}
+
+.section-title p{
+  color:#94a3b8;
+}
+
+.budget-container{
+  display:grid;
+  grid-template-columns:2fr 1fr;
+  gap:25px;
+  align-items:center;
+}
+
+.budget-table{
+  background:rgba(15,23,42,0.8);
+  border:1px solid rgba(255,255,255,0.08);
+  padding:25px;
+  border-radius:24px;
+  backdrop-filter:blur(12px);
+  box-shadow:0 15px 40px rgba(0,0,0,0.45);
+}
+
+.budget-item{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:16px 0;
+  border-bottom:1px solid #1e293b;
+  transition:0.3s;
+}
+
+.budget-item:last-child{
+  border-bottom:none;
+}
+
+.budget-item:hover{
+  transform:translateX(8px);
+}
+
+.budget-item span{
+  color:#e2e8f0;
+  font-size:16px;
+}
+
+.budget-item strong{
+  color:#22c55e;
+  font-size:17px;
+}
+
+.budget-total{
+  position:relative;
+  overflow:hidden;
+  text-align:center;
+  padding:40px 25px;
+  border-radius:28px;
+  background:linear-gradient(135deg,#22c55e,#06b6d4);
+  color:white;
+  box-shadow:0 15px 40px rgba(0,0,0,0.45);
+  animation:floatCard 3s ease-in-out infinite alternate;
+}
+
+.circle{
+  position:absolute;
+  width:180px;
+  height:180px;
+  background:rgba(255,255,255,0.15);
+  border-radius:50%;
+  top:-60px;
+  right:-60px;
+}
+
+.budget-text{
+  letter-spacing:2px;
+  text-transform:uppercase;
+  opacity:0.9;
+  font-size:14px;
+}
+
+.budget-total h1{
+  font-size:54px;
+  margin:10px 0 0;
+}
+
+.budget-total h3{
+  margin-top:-5px;
+  font-size:24px;
+}
+
+.budget-badge{
+  margin-top:20px;
+  padding:12px;
+  border-radius:14px;
+  background:rgba(255,255,255,0.18);
+  backdrop-filter:blur(8px);
+}
+
+@keyframes floatCard{
+  from{
+    transform:translateY(0);
+  }
+  to{
+    transform:translateY(-10px);
+  }
+}
+
+@media(max-width:900px){
+
+  .budget-container{
+    grid-template-columns:1fr;
+  }
+
+}

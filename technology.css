@@ -1,0 +1,228 @@
+/* TECHNOLOGY SECTION */
+
+.technology{
+
+  padding:120px 8%;
+
+  background:
+  linear-gradient(
+    to bottom,
+    #081018,
+    #0f172a
+  );
+}
+
+/* TITLE */
+
+.section-title{
+
+  text-align:center;
+
+  margin-bottom:80px;
+}
+
+.section-title span{
+
+  color:#22c55e;
+
+  letter-spacing:2px;
+
+  font-size:14px;
+}
+
+.section-title h2{
+
+  font-size:55px;
+
+  margin:15px 0;
+}
+
+.section-title p{
+
+  max-width:700px;
+
+  margin:auto;
+
+  color:#cbd5e1;
+
+  line-height:1.8;
+}
+
+/* CATEGORY */
+
+.tech-category{
+
+  margin-bottom:80px;
+}
+
+.category-title{
+
+  font-size:32px;
+
+  margin-bottom:35px;
+
+  color:white;
+
+  position:relative;
+
+  display:inline-block;
+}
+
+.category-title::after{
+
+  content:"";
+
+  position:absolute;
+
+  left:0;
+  bottom:-10px;
+
+  width:70%;
+
+  height:3px;
+
+  background:#22c55e;
+
+  border-radius:10px;
+}
+
+/* GRID */
+
+.tech-container{
+
+  display:grid;
+
+  grid-template-columns:
+  repeat(auto-fit,minmax(360px,1fr));
+
+  gap:28px;
+}
+
+/* CARD */
+
+.tech-card{
+
+  position:relative;
+
+  overflow:hidden;
+
+  padding:35px 18px;
+
+  border-radius:28px;
+
+  background:
+  rgba(255,255,255,0.05);
+
+  border:
+  1px solid rgba(255,255,255,0.08);
+
+  backdrop-filter:blur(12px);
+
+  transition:0.4s;
+}
+
+/* GLOW EFFECT */
+
+.tech-card::before{
+
+  content:"";
+
+  position:absolute;
+
+  top:-50%;
+  left:-50%;
+
+  width:200%;
+  height:200%;
+
+  background:
+  radial-gradient(
+    rgba(34,197,94,0.15),
+    transparent
+  );
+
+  transform:rotate(25deg);
+
+  opacity:0;
+
+  transition:0.5s;
+}
+
+.tech-card:hover::before{
+  opacity:1;
+}
+
+/* HOVER */
+
+.tech-card:hover{
+
+  transform:
+  translateY(-12px);
+
+  border-color:#22c55e;
+
+  box-shadow:
+  0 15px 35px rgba(34,197,94,0.15);
+}
+
+/* ICON */
+
+.tech-icon{
+
+  width:70px;
+  height:70px;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  font-size:32px;
+
+  border-radius:20px;
+
+  margin-bottom:25px;
+
+  background:
+  rgba(34,197,94,0.12);
+
+  border:
+  1px solid rgba(34,197,94,0.2);
+
+  color:#22c55e;
+}
+
+/* TITLE */
+
+.tech-card h3{
+
+  font-size:24px;
+
+  margin-bottom:15px;
+
+  color:white;
+}
+
+/* TEXT */
+
+.tech-card p{
+
+  color:#cbd5e1;
+
+  line-height:1.8;
+
+  font-size:15px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+  .section-title h2{
+    font-size:40px;
+  }
+
+  .category-title{
+    font-size:26px;
+  }
+
+}
